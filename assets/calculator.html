@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet">
+    <title>Calculator</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+</head>
+<body class="calculator-body">
+<section class="calculator">
+    <div class="calculator-container">
+        <div class="calculator-main">
+            <h1 class="calculator-title">КАЛЬКУЛЯТОР СТОИМОСТИ КАРТИН</h1>
+            <div class="calculator-columns">
+                <div class="calculator-column-1">
+                    <img src="images/calculator.png" alt="" class="calculator-main-img">
+                </div>
+                <div class="calculator-column-2">
+                    <div class="calculator-column-text">
+                        <p>Калькулятор стоимости индивидуальной картины на холсте поможет вам определить цену готового
+                            изделия, загрузив ваши собственные изображения.</p>
+                        <p>Вы можете загрузить <b>изображение</b>, выбрать необходимые параметры и добавить подходящий
+                            вариант в корзину также, как если бы вы
+                            добавляли любой товар из категорий на сайте.</p>
+                        <p>Поддерживаемые форматы: <b>jpg, jpeg, png.</b></p>
+                        <p>Для достижения наилучшего качества при печати рекомендуется загружать исходное изображения в
+                            разрешении не менее <b>3000 пикселей</b> по короткой стороне в оригинале без
+                            масштабирования!</p></div>
+                </div>
+            </div>
+            <div id="image-info">
+                <!--                <div class="calculator-image-inner">-->
+                <!--                <div class="calculator-image-container">-->
+                <!--                    <img src="images/me.jpeg" alt="" class="calculator-image">-->
+                <!--                </div>-->
+                <!--                <div class="calculator-image-text-container">-->
+                <!--                <span class="calculator-image-text">-->
+                <!--                    Ваше зображення-->
+                <!--                </span>-->
+                <!--                    <span class="calculator-image-text">-->
+                <!--                        imgfkosfkskof.dsfk-->
+                <!--                </span>-->
+                <!--                </div>-->
+                <!--                </div>-->
+            </div>
+            <div class="calculator-btns">
+                <span id="calculator-invalid-format" class="calculator-invalid-message"></span>
+                <label for="calculator-file-upload" class="calculator-add-image">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                         class="bi bi-plus" viewBox="0 0 16 16">
+                        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+                    </svg>
+                    <span>Добавить файл</span>
+                </label>
+                <input type="file" class="calculator-file-upload" id="calculator-file-upload" style="display: none;">
+                <button id="calculator-delete-image" class="calculator-delete-image">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                         class="bi bi-trash" viewBox="0 0 16 16">
+                        <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/>
+                        <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"/>
+                    </svg>
+                    Удалить
+                </button>
+            </div>
+
+        </div>
+        <div class="calculator-image-columns">
+            <div class="calculator-left-column">
+                <h1 class="calculator-left-column-title">
+                    Кастомная картина
+                </h1>
+                <div class="calculator-picture-container">
+                    <img src="" alt="" class="calculator-picture-img">
+                </div>
+                <div class="calculator-left-column-edit-buttons">
+                    <button class="calculator-left-column-show-breakdown">
+                        Показать разбивку
+                    </button>
+                    <button class="calculator-left-column-edit-breakdown">
+                        Редактировать модели
+                    </button>
+                </div>
+                <div class="calculator-left-column-image-info">
+                    <svg class="calculator-left-column-image-info-svg" xmlns="http://www.w3.org/2000/svg"
+                         viewBox="0 0 512 512">
+                        <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-208a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/>
+                    </svg>
+                    Защитные знаки, при их наличии на изображении, будут отсутствовать после покупки!
+                </div>
+                <div class="calculator-variations">
+                    <div class="calculator-variations-label">
+                        Модульные разбивки
+                    </div>
+                    <div class="calculator-variations-slider-wrapper">
+                        <div class="calculator-variations-slider">
+                            <div class="calculator-variation calculator-variation-active">
+                                <label for="module-1" class="calculator-variation-label-1">
+                                    <img src="images/mods/mod_1.png" alt=""
+                                         class="calculator-variation-selector-img calculator-variation-slider-selector-img">
+                                    Модуль №1
+                                </label>
+                                <input type="radio" id="module-1" data-id="single-module" name="module_type"
+                                       class="calculator-hidden" checked>
+                            </div>
+                            <div class="calculator-variation">
+                                <label for="module-2" class="calculator-variation-label-1">
+                                    <img src="images/mods/mod_2.png" alt=""
+                                         class="calculator-variation-selector-img calculator-variation-slider-selector-img">
+                                    Модуль №2
+                                </label>
+                                <input type="radio" id="module-2" data-id="double-module" name="module_type"
+                                       class="calculator-hidden">
+                            </div>
+                            <div class="calculator-variation">
+                                <label for="module-3" class="calculator-variation-label-1">
+                                    <img src="images/mods/mod_3.png" alt=""
+                                         class="calculator-variation-selector-img calculator-variation-slider-selector-img">
+                                    Модуль №3
+                                </label>
+                                <input type="radio" id="module-3" data-id="single-module" name="module_type"
+                                       class="calculator-hidden">
+                            </div>
+                            <div class="calculator-variation">
+                                <label for="module-4" class="calculator-variation-label-1">
+                                    <img src="images/mods/mod_4.png" alt=""
+                                         class="calculator-variation-selector-img calculator-variation-slider-selector-img">
+                                    Модуль №4
+                                </label>
+                                <input type="radio" id="module-4" data-id="double-module" name="module_type"
+                                       class="calculator-hidden">
+                            </div>
+                            <div class="calculator-variation">
+                                <label for="module-5" class="calculator-variation-label-1">
+                                    <img src="images/mods/mod_5.png" alt=""
+                                         class="calculator-variation-selector-img calculator-variation-slider-selector-img">
+                                    Модуль №5
+                                </label>
+                                <input type="radio" id="module-5" data-id="double-module" name="module_type"
+                                       class="calculator-hidden">
+                            </div>
+                            <div class="calculator-variation">
+                                <label for="module-6" class="calculator-variation-label-1">
+                                    <img src="images/mods/mod_6.png" alt=""
+                                         class="calculator-variation-selector-img calculator-variation-slider-selector-img">
+                                    Модуль №6
+                                </label>
+                                <input type="radio" id="module-6" data-id="double-module" name="module_type"
+                                       class="calculator-hidden">
+                            </div>
+                            <div class="calculator-variation">
+                                <label for="module-7" class="calculator-variation-label-1">
+                                    <img src="images/mods/mod_7.png" alt=""
+                                         class="calculator-variation-selector-img calculator-variation-slider-selector-img">
+                                    Модуль №7
+                                </label>
+                                <input type="radio" id="module-7" data-id="double-module" name="module_type"
+                                       class="calculator-hidden">
+                            </div>
+                            <div class="calculator-variation">
+                                <label for="module-8" class="calculator-variation-label-1">
+                                    <img src="images/mods/mod_8.png" alt=""
+                                         class="calculator-variation-selector-img calculator-variation-slider-selector-img">
+                                    Модуль №8
+                                </label>
+                                <input type="radio" id="module-8" data-id="double-module" name="module_type"
+                                       class="calculator-hidden">
+                            </div>
+                            <div class="calculator-variation">
+                                <label for="module-9" class="calculator-variation-label-1">
+                                    <img src="images/mods/mod_9.png" alt=""
+                                         class="calculator-variation-selector-img calculator-variation-slider-selector-img">
+                                    Модуль №9
+                                </label>
+                                <input type="radio" id="module-9" data-id="double-module" name="module_type"
+                                       class="calculator-hidden">
+                            </div>
+                            <div class="calculator-variation">
+                                <label for="module-10" class="calculator-variation-label-1 ">
+                                    <img src="images/mods/mod_10.png" alt=""
+                                         class="calculator-variation-selector-img calculator-variation-slider-selector-img">
+                                    Модуль №10
+                                </label>
+                                <input type="radio" id="module-10" data-id="double-module" name="module_type"
+                                       class="calculator-hidden">
+                            </div>
+                            <div class="calculator-variation">
+                                <label for="module-11" class="calculator-variation-label-1 ">
+                                    <img src="images/mods/mod_11.png" alt=""
+                                         class="calculator-variation-selector-img calculator-variation-slider-selector-img">
+                                    Модуль №11
+                                </label>
+                                <input type="radio" id="module-11" data-id="double-module" name="module_type"
+                                       class="calculator-hidden">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="calculator-rights-column">
+                <div class="calculator-rights-column-picture-variations">
+                    <div class="calculator-rights-column-picture-variation calculator-rights-column-picture-variation-active">
+                        <img src="images/variations/single_type.png" alt=""
+                             class="calculator-rights-column-picture-variation-img">
+                        Одиночная
+                    </div>
+                    <div class="calculator-rights-column-picture-variation">
+                        <img src="images/variations/module_type.png" alt=""
+                             class="calculator-rights-column-picture-variation-img">
+                        Модульная
+                    </div>
+                </div>
+                <div class="calculator-dimensions">
+                    <div class="calculator-dimensions-title">
+                        Габариты, см
+                        <svg class="calculator-dimensions-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path d="M504 256c0 137-111 248-248 248S8 393 8 256C8 119.1 119 8 256 8s248 111.1 248 248zM262.7 90c-54.5 0-89.3 23-116.5 63.8-3.5 5.3-2.4 12.4 2.7 16.3l34.7 26.3c5.2 3.9 12.6 3 16.7-2.1 17.9-22.7 30.1-35.8 57.3-35.8 20.4 0 45.7 13.1 45.7 33 0 15-12.4 22.7-32.5 34C247.1 238.5 216 254.9 216 296v4c0 6.6 5.4 12 12 12h56c6.6 0 12-5.4 12-12v-1.3c0-28.5 83.2-29.6 83.2-106.7 0-58-60.2-102-116.5-102zM256 338c-25.4 0-46 20.6-46 46 0 25.4 20.6 46 46 46s46-20.6 46-46c0-25.4-20.6-46-46-46z"/>
+                        </svg>
+                    </div>
+                    <div class="calculator-dimensions-wrapper">
+                        <div class="calculator-dimensions-select-size">
+                            <div class="calculator-dimensions-select-size-width-and-length">
+                                <label for="width">
+                                    Ширина
+                                    <input type="number" id="width" name="width">
+                                </label>
+                                <label for="width">
+                                    Высота
+                                    <input type="number" id="height" name="width">
+                                </label>
+                            </div>
+                            <span class="calculator-dimensions-select-size-info">
+                                Введите или установите габарит:
+                            </span>
+                        </div>
+                        <ul class="calculator-dimensions-select-modal-size">
+                            <li class="calculator-dimensions-select-modal-size-item">
+                                Сегмент №1: <span>20 x 28 см</span>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="calculator-select-picture-type">
+                    <label class="calculator-select-picture-type-element calculator-select-picture-type-element-checked"
+                           for="picture">
+                        <input class="calculator-hidden" type="radio" id="picture" name="type" checked>
+                        Картина
+                    </label>
+                    <label class="calculator-select-picture-type-element" for="print">
+                        <input class="calculator-hidden" type="radio" id="print" name="type">
+                        Только печать
+                    </label>
+
+                    <svg class="calculator-select-picture-type-info" xmlns="http://www.w3.org/2000/svg"
+                         viewBox="0 0 512 512">
+                        <path d="M504 256c0 137-111 248-248 248S8 393 8 256C8 119.1 119 8 256 8s248 111.1 248 248zM262.7 90c-54.5 0-89.3 23-116.5 63.8-3.5 5.3-2.4 12.4 2.7 16.3l34.7 26.3c5.2 3.9 12.6 3 16.7-2.1 17.9-22.7 30.1-35.8 57.3-35.8 20.4 0 45.7 13.1 45.7 33 0 15-12.4 22.7-32.5 34C247.1 238.5 216 254.9 216 296v4c0 6.6 5.4 12 12 12h56c6.6 0 12-5.4 12-12v-1.3c0-28.5 83.2-29.6 83.2-106.7 0-58-60.2-102-116.5-102zM256 338c-25.4 0-46 20.6-46 46 0 25.4 20.6 46 46 46s46-20.6 46-46c0-25.4-20.6-46-46-46z"/>
+                    </svg>
+                </div>
+                <div class="calculator-variations">
+                    <div class="calculator-variations-label">
+                        Тип натяжки
+                        <svg class="calculator-variations-label-info" xmlns="http://www.w3.org/2000/svg"
+                             viewBox="0 0 512 512">
+                            <path d="M504 256c0 137-111 248-248 248S8 393 8 256C8 119.1 119 8 256 8s248 111.1 248 248zM262.7 90c-54.5 0-89.3 23-116.5 63.8-3.5 5.3-2.4 12.4 2.7 16.3l34.7 26.3c5.2 3.9 12.6 3 16.7-2.1 17.9-22.7 30.1-35.8 57.3-35.8 20.4 0 45.7 13.1 45.7 33 0 15-12.4 22.7-32.5 34C247.1 238.5 216 254.9 216 296v4c0 6.6 5.4 12 12 12h56c6.6 0 12-5.4 12-12v-1.3c0-28.5 83.2-29.6 83.2-106.7 0-58-60.2-102-116.5-102zM256 338c-25.4 0-46 20.6-46 46 0 25.4 20.6 46 46 46s46-20.6 46-46c0-25.4-20.6-46-46-46z"/>
+                        </svg>
+                    </div>
+                    <div class="calculator-variations-selector">
+                        <div class="calculator-variation">
+                            <label for="option1" class="calculator-variation-label">
+                                <img src="images/variations2/canvas_stretch_g1.png" alt=""
+                                     class="calculator-variation-selector-img">
+                                Галерейная
+                            </label>
+                            <input type="radio" id="option1" name="options" class="selector-input" checked>
+                        </div>
+
+                        <div class="calculator-variation">
+                            <label for="option2" class="calculator-variation-label">
+                                <img src="images/variations2/canvas_stretch_s1.png" alt=""
+                                     class="calculator-variation-selector-img">
+                                Студийная
+                            </label>
+                            <input type="radio" id="option2" name="options" class="selector-input">
+                        </div>
+                    </div>
+                </div>
+                <div class="calculator-variations">
+                    <div class="calculator-variations-label">
+                        Материал
+                    </div>
+                    <div class="calculator-variations-selector">
+                        <div class="calculator-variation">
+                            <label for="option3" class="calculator-variation-label">
+                                <img src="images/variations3/syntetic.png" alt=""
+                                     class="calculator-variation-selector-img">
+                                Галерейная
+                            </label>
+                            <input type="radio" id="option3" name="options1" class="selector-input" checked>
+                        </div>
+                    </div>
+                </div>
+                <div class="calculator-variations">
+                    <div class="calculator-variations-label">
+                        Лак
+                        <svg class="calculator-variations-label-info" xmlns="http://www.w3.org/2000/svg"
+                             viewBox="0 0 512 512">
+                            <path d="M504 256c0 137-111 248-248 248S8 393 8 256C8 119.1 119 8 256 8s248 111.1 248 248zM262.7 90c-54.5 0-89.3 23-116.5 63.8-3.5 5.3-2.4 12.4 2.7 16.3l34.7 26.3c5.2 3.9 12.6 3 16.7-2.1 17.9-22.7 30.1-35.8 57.3-35.8 20.4 0 45.7 13.1 45.7 33 0 15-12.4 22.7-32.5 34C247.1 238.5 216 254.9 216 296v4c0 6.6 5.4 12 12 12h56c6.6 0 12-5.4 12-12v-1.3c0-28.5 83.2-29.6 83.2-106.7 0-58-60.2-102-116.5-102zM256 338c-25.4 0-46 20.6-46 46 0 25.4 20.6 46 46 46s46-20.6 46-46c0-25.4-20.6-46-46-46z"/>
+                        </svg>
+                    </div>
+                    <div class="calculator-variations-selector">
+                        <div class="calculator-variation">
+                            <label for="option4" class="calculator-variation-label">
+                                <img src="images/variations4/no_option.png" alt=""
+                                     class="calculator-variation-selector-img">
+                                Без лака
+                            </label>
+                            <input type="radio" id="option4" name="options2" class="selector-input" checked>
+                        </div>
+                        <div class="calculator-variation">
+                            <label for="option5" class="calculator-variation-label">
+                                <img src="images/variations4/glossy_coat.png" alt=""
+                                     class="calculator-variation-selector-img">
+                                Глянец
+                            </label>
+                            <input type="radio" id="option5" name="options2" class="selector-input">
+                        </div>
+                        <div class="calculator-variation">
+                            <label for="option6" class="calculator-variation-label">
+                                <img src="images/variations4/matte_coat.png" alt=""
+                                     class="calculator-variation-selector-img">
+                                Матовий
+                            </label>
+                            <input type="radio" id="option6" name="options2" class="selector-input">
+                        </div>
+                    </div>
+                </div>
+                <div class="calculator-variations">
+                    <div class="calculator-variations-label">
+                        Рамка
+                        <svg class="calculator-variations-label-info" xmlns="http://www.w3.org/2000/svg"
+                             viewBox="0 0 512 512">
+                            <path d="M504 256c0 137-111 248-248 248S8 393 8 256C8 119.1 119 8 256 8s248 111.1 248 248zM262.7 90c-54.5 0-89.3 23-116.5 63.8-3.5 5.3-2.4 12.4 2.7 16.3l34.7 26.3c5.2 3.9 12.6 3 16.7-2.1 17.9-22.7 30.1-35.8 57.3-35.8 20.4 0 45.7 13.1 45.7 33 0 15-12.4 22.7-32.5 34C247.1 238.5 216 254.9 216 296v4c0 6.6 5.4 12 12 12h56c6.6 0 12-5.4 12-12v-1.3c0-28.5 83.2-29.6 83.2-106.7 0-58-60.2-102-116.5-102zM256 338c-25.4 0-46 20.6-46 46 0 25.4 20.6 46 46 46s46-20.6 46-46c0-25.4-20.6-46-46-46z"/>
+                        </svg>
+                    </div>
+                    <div class="calculator-variations-selector">
+                        <div class="calculator-variation">
+                            <label for="no-ramka" class="calculator-variation-label">
+                                <img src="images/variations4/no_option.png" alt=""
+                                     class="calculator-variation-selector-img">
+                                Без рамки
+                            </label>
+                            <input type="radio" id="no-ramka" name="options3" class="selector-input" checked>
+                        </div>
+                        <div class="calculator-variation">
+                            <label for="black-ramka" class="calculator-variation-label">
+                                <img src="images/variations5/outer_frame_w.png" alt=""
+                                     class="calculator-variation-selector-img">
+                                Черная
+                            </label>
+                            <input type="radio" id="black-ramka" name="options3" class="selector-input">
+                        </div>
+                        <div class="calculator-variation">
+                            <label for="white-ramka" class="calculator-variation-label">
+                                <img src="images/variations5/outer_frame_w.png" alt=""
+                                     class="calculator-variation-selector-img">
+                                Белая
+                            </label>
+                            <input type="radio" id="white-ramka" name="options3" class="selector-input">
+                        </div>
+                        <div class="calculator-variation">
+                            <label for="grey-ramka" class="calculator-variation-label">
+                                <img src="images/variations5/outer_frame_s.png" alt=""
+                                     class="calculator-variation-selector-img">
+                                Серая(Серебро)
+                            </label>
+                            <input type="radio" id="grey-ramka" name="options3" class="selector-input">
+                        </div>
+                    </div>
+                </div>
+                <div class="calculator-variations">
+                    <div class="calculator-variations-label">
+                        Подрамник
+                        <svg class="calculator-variations-label-info" xmlns="http://www.w3.org/2000/svg"
+                             viewBox="0 0 512 512">
+                            <path d="M504 256c0 137-111 248-248 248S8 393 8 256C8 119.1 119 8 256 8s248 111.1 248 248zM262.7 90c-54.5 0-89.3 23-116.5 63.8-3.5 5.3-2.4 12.4 2.7 16.3l34.7 26.3c5.2 3.9 12.6 3 16.7-2.1 17.9-22.7 30.1-35.8 57.3-35.8 20.4 0 45.7 13.1 45.7 33 0 15-12.4 22.7-32.5 34C247.1 238.5 216 254.9 216 296v4c0 6.6 5.4 12 12 12h56c6.6 0 12-5.4 12-12v-1.3c0-28.5 83.2-29.6 83.2-106.7 0-58-60.2-102-116.5-102zM256 338c-25.4 0-46 20.6-46 46 0 25.4 20.6 46 46 46s46-20.6 46-46c0-25.4-20.6-46-46-46z"/>
+                        </svg>
+                    </div>
+                    <div class="calculator-variations-selector">
+                        <div class="calculator-variation">
+                            <label for="frame1" class="calculator-variation-label">
+                                <img src="images/variations6/frame_1.png" alt=""
+                                     class="calculator-variation-selector-img">
+                                Подрамник, тип №1 (18 * 40 мм) </label>
+                            <input type="radio" id="frame1" name="options4" class="selector-input" checked>
+                        </div>
+                        <div class="calculator-variation">
+                            <label for="frame2" class="calculator-variation-label">
+                                <img src="images/variations6/frame_2.png" alt=""
+                                     class="calculator-variation-selector-img">
+                                Подрамник, тип №2 (22 * 55 мм)
+                            </label>
+                            <input type="radio" id="frame2" name="options4" class="selector-input">
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+
+<script src="js/upload-files.js"></script>
+<script src="js/checked.js"></script>
+
+</body>
+</html>

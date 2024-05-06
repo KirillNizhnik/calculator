@@ -1,0 +1,137 @@
+.calculator {
+    margin-top: 16px;
+}
+
+.calculator-title {
+
+    font-size: 16px;
+    text-align: center;
+    font-weight: 400;
+
+}
+
+.calculator-main {
+    padding: 16px 16px;
+    background: #fff;
+    box-shadow: 0 0 2px rgba(0, 0, 0, .1);
+}
+
+.calculator-columns {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px
+}
+
+.calculator-main-img {
+    max-width: 620px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.calculator-column-text {
+    font-size: 15px;
+}
+
+.calculator-image-inner{
+    margin-top: 10px;
+    display: flex;
+    width: fit-content;
+    padding: 5px;
+    border: 1px solid green;
+    border-radius: 10px;
+    font-size: 10px;
+    gap: 5px;
+}
+
+.calculator-image-container {
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+}
+
+.calculator-image-text-container{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.calculator-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+.calculator-column-text p + p {
+    margin-top: 15px;
+}
+
+.calculator-btns {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.calculator-add-image,
+.calculator-delete-image {
+    color: #fff;
+    display: flex;
+    gap: 1px;
+    padding: 10px;
+    border-radius: 1px;
+
+}
+
+
+.calculator-add-image {
+     background-color: #5cb85c;
+     border-color: #4cae4c;
+     width: fit-content;
+ }
+
+.calculator-add-image:hover {
+    background-color: #4cae4c;
+    border-color: #4cae4c;
+}
+
+.calculator-add-image:active{
+    background-color: darkgrey;
+    border-color: #4cae4c;
+}
+
+
+
+
+
+.calculator-delete-image {
+    visibility: hidden;
+    width: fit-content;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+}
+
+.calculator-delete-image:hover {
+    background-color: #d43f3a;
+    border-color: #d43f3a;
+}
+
+.calculator-invalid-message{
+    margin-top: 5px;
+    font-size: 13px;
+    color: #d43f3a;
+}
+
+
+
+@media (min-width: 1200px) {
+    .calculator-columns {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        flex-direction: row;
+    }
+
+}

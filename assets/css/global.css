@@ -1,0 +1,130 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --Grey: #D4D4D4;
+    --Dark-Grey: #939393;
+    --White: #FFF;
+    --Green: #008535;
+    --gradient-start: #484848;
+    --gradient-end: #262626;
+    --Orange: #D45F1C
+
+}
+
+.body {
+    font-family: "Noto Sans", sans-serif;
+    background-repeat: no-repeat;
+    background-color: #16171D;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+
+
+::selection {
+    /*background-color: var(--beige-dark);*/
+    /*color: var(--brown-dark);*/
+}
+
+
+img {
+    display: block;
+    height: auto;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+svg {
+    display: block;
+}
+
+.list {
+    list-style: none;
+    margin: 0;
+}
+
+.link {
+    text-decoration: none;
+    margin: 0;
+}
+
+ul, ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+button {
+    cursor: pointer;
+    border: none;
+    display: block;
+}
+
+
+
+.calculator-container{
+    max-width: 100%;
+    padding: 0 15px;
+}
+
+
+.calculator-body {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    color: #252525;
+    background: #f5f5f5;
+}
+
+
+@media (min-width: 750px) {
+    .calculator-container{
+        max-width: 750px;
+        padding: 0 15px;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 990px) {
+    .calculator-container{
+        max-width: 990px;
+        padding: 0 15px;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 1200px) {
+    .calculator-container{
+        max-width: 1200px;
+    }
+}
+
+
+
+
+
+
