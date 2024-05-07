@@ -88,6 +88,7 @@
 }
 
 .calculator-dimensions-svg {
+    cursor: pointer;
     width: 14px;
 }
 
@@ -251,6 +252,7 @@
 }
 
 .calculator-variations-label-info{
+    cursor: pointer;
     width: 14px;
 }
 
@@ -291,10 +293,15 @@
 }
 
 .calculator-variation-label{
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.selector-input{
+    cursor: pointer;
 }
 
 .calculator-variation{

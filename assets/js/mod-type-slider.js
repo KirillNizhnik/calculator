@@ -19,6 +19,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const prevButton = document.querySelector('.calculator-mode-slide-prev-button');
     const nextButton = document.querySelector('.calculator-mode-slide-next-button');
+    let isMouseDown = false;
+    let startX;
+    let scrollLeft;
 
     nextButton.addEventListener('click', function() {
         slider.scrollBy({
@@ -32,5 +35,27 @@ document.addEventListener("DOMContentLoaded", function() {
             left: -moduleWidth,
             behavior: 'smooth'
         });
+    });
+
+    slider.addEventListener('mousedown', function(e) {
+        isMouseDown = true;
+        startX = e.pageX - slider.offsetLeft;
+        scrollLeft = slider.scrollLeft;
+    });
+
+    slider.addEventListener('mouseleave', function() {
+        isMouseDown = false;
+    });
+
+    slider.addEventListener('mouseup', function() {
+        isMouseDown = false;
+    });
+
+    slider.addEventListener('mousemove', function(e) {
+        if (!isMouseDown) return;
+        e.preventDefault();
+        const x = e.pageX - slider.offsetLeft;
+        const walk = (x - startX) * 3;
+        slider.scrollLeft = scrollLeft - walk;
     });
 });
