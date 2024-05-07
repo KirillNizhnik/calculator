@@ -14,16 +14,4 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    variationInputs.forEach(function(input) {
-        input.addEventListener('change', function() {
-            const parentVariation = input.closest('.calculator-variation');
-
-            const allVariations = document.querySelectorAll('.calculator-variation');
-            allVariations.forEach(function(variation) {
-                variation.classList.remove('calculator-variation-active');
-            });
-
-            parentVariation.classList.add('calculator-variation-active');
-        });
-    });
 });

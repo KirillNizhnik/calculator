@@ -305,6 +305,7 @@
 
 .calculator-variations-slider-wrapper{
     margin-top: 10px;
+    position: relative;
 }
 
 .calculator-variations-slider {
@@ -338,6 +339,110 @@
     margin: 10px 7px 0 7px;
 
 }
+
+.calculator-mode-slide-next-button,
+.calculator-mode-slide-prev-button {
+    position: absolute;
+    top: 50%;
+    z-index: 100;
+    transform: translateY(-50%);
+    padding: 15px 8px;
+}
+
+.calculator-mode-slide-next-button {
+    right: 0;
+}
+
+.calculator-mode-slide-prev-button {
+    left: 0;
+}
+
+.calculator-mode-slide-next-button:hover,
+.calculator-mode-slide-prev-button:hover{
+    background: #ffa201;
+    color: #ffffff;
+}
+
+.calculator-interiors-slider-wrapper{
+    margin-top: 10px;
+    position: relative;
+}
+
+.calculator-interiors-slider {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    width: 100%;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+.calculator-interiors-slider::-webkit-scrollbar {
+    display: none;
+}
+
+.calculator-interiors-slider {
+    width: 100%;
+    display: flex;
+    scroll-snap-type: x mandatory;
+    gap: 10px;
+    scroll-behavior: smooth;
+}
+
+.calculator-interior-variation {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+}
+
+.calculator-interior-variation img {
+    width: 100%;
+    height: auto;
+}
+
+.calculator-interior-slide-next-button,
+.calculator-interior-slide-prev-button {
+    position: absolute;
+    top: 50%;
+    z-index: 100;
+    transform: translateY(-50%);
+    padding: 15px 8px;
+}
+
+.calculator-interior-slide-next-button {
+    right: 0;
+}
+
+.calculator-interior-slide-prev-button {
+    left: 0;
+}
+
+.calculator-interior-slide-next-button:hover,
+.calculator-interior-slide-prev-button:hover{
+    background: #ffa201;
+    color: #ffffff;
+}
+
+.calculator-picture-characteristics-table{
+    margin-top: 10px;
+    text-align: center;
+    font-size: 14px;
+    padding: 8px;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+}
+
+
+
+.calculator-picture-characteristics-table tr,
+.calculator-picture-characteristics-table th,
+.calculator-picture-characteristics-table td{
+    padding: 8px;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+}
+
+
+
+
 
 
 
