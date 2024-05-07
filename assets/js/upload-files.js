@@ -2,6 +2,7 @@ const imageInfoContainer = document.getElementById('image-info');
 const fileInput = document.getElementById('calculator-file-upload');
 const deleteImageBtn = document.getElementById('calculator-delete-image')
 const calculatorInvalidFormat = document.getElementById('calculator-invalid-format')
+const calculatorMenu = document.getElementById('custom-img')
 
 fileInput.addEventListener('change', function(event) {
     const file = event.target.files[0];
@@ -11,6 +12,7 @@ fileInput.addEventListener('change', function(event) {
     if (file && /\.(jpg|jpeg|png)$/i.test(file.name)) {
         displayImage(file);
         showDeleteButton();
+        showCalculatorMenu();
     } else {
         clearFileInput();
         displayInvalidFormatMessage();
@@ -20,6 +22,7 @@ fileInput.addEventListener('change', function(event) {
 
 
 deleteImageBtn.addEventListener('click', function (){
+    hideCalculatorMenu();
     hideDeleteImageButton();
     clearImageInfoContainer();
     clearFileInput();
@@ -76,4 +79,14 @@ function clearFileInput() {
 function displayInvalidFormatMessage() {
     calculatorInvalidFormat.innerText = 'Этот формат не подходит, пожалуйста вставьте jpg, jpeg, png.';
 }
+
+function showCalculatorMenu(){
+    calculatorMenu.classList.remove('calculator-image-columns-custom-hidden')
+}
+
+
+function hideCalculatorMenu(){
+    calculatorMenu.classList.add('calculator-image-columns-custom-hidden')
+}
+
 
