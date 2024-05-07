@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const variationInputs = document.querySelectorAll('.calculator-variation input[type="radio"]');
+    const variationInputs = document.querySelectorAll('.calculator-variation-mode input[type="radio"]');
 
     variationInputs.forEach(function(input) {
         input.addEventListener('change', function() {
-            const parentVariation = input.closest('.calculator-variation');
+            const parentVariation = input.closest('.calculator-variation-mode');
 
-            const allVariations = document.querySelectorAll('.calculator-variation');
+            const allVariations = document.querySelectorAll('.calculator-variation-mode');
             allVariations.forEach(function(variation) {
                 variation.classList.remove('calculator-variation-active');
             });

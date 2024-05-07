@@ -176,6 +176,14 @@
     width: 30px;
 }
 
+#width::-webkit-inner-spin-button,
+#width::-webkit-outer-spin-button,
+#height::-webkit-inner-spin-button,
+#height::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 .calculator-dimensions-select-size-info{
     display: block;
     margin-top: 10px;
@@ -391,6 +399,7 @@
 .calculator-interior-variation {
     flex: 0 0 auto;
     scroll-snap-align: start;
+    cursor: pointer;
 }
 
 .calculator-interior-variation img {
@@ -440,7 +449,7 @@
     border: 1px solid #ddd;
 }
 
-.
+
 
 
 
