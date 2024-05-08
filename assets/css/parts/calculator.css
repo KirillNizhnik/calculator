@@ -502,6 +502,18 @@
 
 
 
+.calculator-variations-label-info:hover{
+    fill: orange;
+
+}
+
+.calculator-dimensions-svg:hover{
+    fill: orange;
+}
+
+.calculator-select-picture-type-info:hover{
+    fill: orange;
+}
 
 
 

@@ -1,0 +1,45 @@
+.dimensions-pop-up{
+    padding: 20px;
+    display: block;
+    position: relative;
+    z-index: 601;
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px auto;
+    background-color: #F9f9f9;
+    overflow: auto;
+}
+
+.dimensions-pop-up-close{
+    position: absolute;
+    background: none;
+    width: 8px;
+    right: 40px;
+    top: -20px;
+}
+.dimensions-pop-up-close-svg{
+    width: 20px;
+}
+
+.dimensions-pop-up-inner{
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    align-items: center;
+}
+
+.dimensions-pop-up-img{
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+}
+
+.dimensions-pop-up-content{
+    border-left: 1px solid #bdbdbd;
+    padding: 15px;
+    margin-left: 20px;
+}
+
+.dimensions-pop-up-content img{
+    width: 100%;
+    height: auto;
+}

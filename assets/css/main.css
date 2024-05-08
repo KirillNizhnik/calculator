@@ -2,3 +2,6 @@
 @import "global.css";
 @import "parts/main.css";
 @import "parts/calculator.css";
+@import "pop-up/tension-type-pop-up.css";
+@import "pop-up/dimensions-pop-up.css";
+@import "pop-up/painting-or-print-pop-up.css";
