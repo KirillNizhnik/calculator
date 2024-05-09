@@ -1,0 +1,53 @@
+.varnish-pop-up{
+    padding: 20px;
+    display: none;
+    position: relative;
+    z-index: 601;
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px auto;
+    background-color: #FFFFFF;
+    overflow: auto;
+}
+
+
+.varnish-pop-up-close{
+    position: absolute;
+    background: none;
+    width: 8px;
+    right: 40px;
+    top: -20px;
+}
+
+.varnish-pop-up-close-svg{
+    width: 20px;
+}
+
+.varnish-pop-up-item-img{
+    width: 100%;
+    height: auto;
+}
+
+.varnish-pop-up-item{
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+}
+
+.varnish-pop-up-item-content span{
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.varnish-pop-up-item-content p{
+    margin-top: 10px;
+}
+.varnish-pop-up-item {
+    margin-bottom: 20px;
+    border-bottom: 1px dashed black;;
+}
+
+.varnish-pop-up-item:last-child {
+    border-bottom: none;
+}

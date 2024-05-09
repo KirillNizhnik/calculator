@@ -75,8 +75,7 @@
                 </h1>
                 <div class="calculator-picture-container">
                     <div class="calculator-zoom-container">
-                        <img src="" alt="" class="calculator-picture-img">
-                        <div class="zoom-circle"></div>
+                        <img id="zoom-picture" src="" alt="" class="calculator-picture-img">
                     </div>
                 </div>
                 <div class="calculator-left-column-edit-buttons">
@@ -127,7 +126,7 @@
                                     Модуль №3
                                 </label>
                                 <input data-src="images/edit/d_mod_3.jpg" type="radio" id="module-3"
-                                       data-id="single-module" name="module_type"
+                                       data-id="double-module" name="module_type"
                                        class="calculator-hidden">
                             </div>
                             <div class="calculator-variation calculator-variation-mode calculator-slider-variation">
@@ -318,7 +317,7 @@
                 <div class="calculator-dimensions">
                     <div class="calculator-dimensions-title">
                         Габариты, см
-                        <svg class="calculator-dimensions-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <svg id="dimensions-pop-up" class="calculator-dimensions-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                             <path d="M504 256c0 137-111 248-248 248S8 393 8 256C8 119.1 119 8 256 8s248 111.1 248 248zM262.7 90c-54.5 0-89.3 23-116.5 63.8-3.5 5.3-2.4 12.4 2.7 16.3l34.7 26.3c5.2 3.9 12.6 3 16.7-2.1 17.9-22.7 30.1-35.8 57.3-35.8 20.4 0 45.7 13.1 45.7 33 0 15-12.4 22.7-32.5 34C247.1 238.5 216 254.9 216 296v4c0 6.6 5.4 12 12 12h56c6.6 0 12-5.4 12-12v-1.3c0-28.5 83.2-29.6 83.2-106.7 0-58-60.2-102-116.5-102zM256 338c-25.4 0-46 20.6-46 46 0 25.4 20.6 46 46 46s46-20.6 46-46c0-25.4-20.6-46-46-46z"/>
                         </svg>
                     </div>
@@ -357,13 +356,13 @@
                         Только печать
                     </label>
 
-                    <svg class="calculator-select-picture-type-info" xmlns="http://www.w3.org/2000/svg"
+                    <svg id="painting-or-print-pop-up" class="calculator-select-picture-type-info" xmlns="http://www.w3.org/2000/svg"
                          viewBox="0 0 512 512">
                         <path d="M504 256c0 137-111 248-248 248S8 393 8 256C8 119.1 119 8 256 8s248 111.1 248 248zM262.7 90c-54.5 0-89.3 23-116.5 63.8-3.5 5.3-2.4 12.4 2.7 16.3l34.7 26.3c5.2 3.9 12.6 3 16.7-2.1 17.9-22.7 30.1-35.8 57.3-35.8 20.4 0 45.7 13.1 45.7 33 0 15-12.4 22.7-32.5 34C247.1 238.5 216 254.9 216 296v4c0 6.6 5.4 12 12 12h56c6.6 0 12-5.4 12-12v-1.3c0-28.5 83.2-29.6 83.2-106.7 0-58-60.2-102-116.5-102zM256 338c-25.4 0-46 20.6-46 46 0 25.4 20.6 46 46 46s46-20.6 46-46c0-25.4-20.6-46-46-46z"/>
                     </svg>
                 </div>
                 <div class="calculator-variations">
-                    <div class="calculator-variations-label">
+                    <div  class="calculator-variations-label">
                         Тип натяжки
                         <svg id="tension-type-pop-up" class="calculator-variations-label-info"
                              xmlns="http://www.w3.org/2000/svg"
@@ -409,7 +408,7 @@
                 <div class="calculator-variations">
                     <div class="calculator-variations-label">
                         Лак
-                        <svg class="calculator-variations-label-info" xmlns="http://www.w3.org/2000/svg"
+                        <svg id="varnish-pop-up" class="calculator-variations-label-info" xmlns="http://www.w3.org/2000/svg"
                              viewBox="0 0 512 512">
                             <path d="M504 256c0 137-111 248-248 248S8 393 8 256C8 119.1 119 8 256 8s248 111.1 248 248zM262.7 90c-54.5 0-89.3 23-116.5 63.8-3.5 5.3-2.4 12.4 2.7 16.3l34.7 26.3c5.2 3.9 12.6 3 16.7-2.1 17.9-22.7 30.1-35.8 57.3-35.8 20.4 0 45.7 13.1 45.7 33 0 15-12.4 22.7-32.5 34C247.1 238.5 216 254.9 216 296v4c0 6.6 5.4 12 12 12h56c6.6 0 12-5.4 12-12v-1.3c0-28.5 83.2-29.6 83.2-106.7 0-58-60.2-102-116.5-102zM256 338c-25.4 0-46 20.6-46 46 0 25.4 20.6 46 46 46s46-20.6 46-46c0-25.4-20.6-46-46-46z"/>
                         </svg>
@@ -444,7 +443,7 @@
                 <div class="calculator-variations">
                     <div class="calculator-variations-label">
                         Рамка
-                        <svg class="calculator-variations-label-info" xmlns="http://www.w3.org/2000/svg"
+                        <svg id="frame-pop-up" class="calculator-variations-label-info" xmlns="http://www.w3.org/2000/svg"
                              viewBox="0 0 512 512">
                             <path d="M504 256c0 137-111 248-248 248S8 393 8 256C8 119.1 119 8 256 8s248 111.1 248 248zM262.7 90c-54.5 0-89.3 23-116.5 63.8-3.5 5.3-2.4 12.4 2.7 16.3l34.7 26.3c5.2 3.9 12.6 3 16.7-2.1 17.9-22.7 30.1-35.8 57.3-35.8 20.4 0 45.7 13.1 45.7 33 0 15-12.4 22.7-32.5 34C247.1 238.5 216 254.9 216 296v4c0 6.6 5.4 12 12 12h56c6.6 0 12-5.4 12-12v-1.3c0-28.5 83.2-29.6 83.2-106.7 0-58-60.2-102-116.5-102zM256 338c-25.4 0-46 20.6-46 46 0 25.4 20.6 46 46 46s46-20.6 46-46c0-25.4-20.6-46-46-46z"/>
                         </svg>
@@ -630,18 +629,20 @@
                 <img src="images/pop-up/ready_canvas.jpg" alt="" class="painting-or-print-img">
                 <div class="painting-or-print-content">
 
-                <p><span>Картина</span><br>это полностью готовое к монтажу изделие, выполненное в соответствии с указанными параметрами.</p>
-                <p>Картина представляет собой печатный холст, натянутый на специальный крепкий деревянный каркас
-                    (подрамник).</p>
-                <p>Изделие может, по желанию, обрамяляться внешней рамкой, либо выполняться без нее.</p>
-                <p>Комплектуется необходимой монтажной фурнитурой.</p>
+                    <p><span>Картина</span><br>это полностью готовое к монтажу изделие, выполненное в соответствии с
+                        указанными параметрами.</p>
+                    <p>Картина представляет собой печатный холст, натянутый на специальный крепкий деревянный каркас
+                        (подрамник).</p>
+                    <p>Изделие может, по желанию, обрамяляться внешней рамкой, либо выполняться без нее.</p>
+                    <p>Комплектуется необходимой монтажной фурнитурой.</p>
                 </div>
             </div>
             <div class="painting-or-print-column-2">
                 <img src="images/pop-up/rolled_canvas.jpg" alt="" class="painting-or-print-img">
                 <div class="painting-or-print-content">
 
-                    <p><span>Только печать</span><br>это отдельно отпечатанный холст с изображением по необходимым вам параметрам.</p>
+                    <p><span>Только печать</span><br>это отдельно отпечатанный холст с изображением по необходимым вам
+                        параметрам.</p>
                     <p>Как правило, выполняется со стандартными вылетами на подворот, в зависимости от указанных
                         габаритов полотна.</p>
                     <p>Холст может дополнительно, по желанию, покрываться лаком (только натуральный).</p>
@@ -650,6 +651,103 @@
             </div>
         </div>
     </div>
+    <div class="varnish-pop-up">
+        <button class="varnish-pop-up-close">
+            <svg class="varnish-pop-up-close-svg" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                 width="100"
+                 height="100" viewBox="0 0 50 50">
+                <path d="M 7.71875 6.28125 L 6.28125 7.71875 L 23.5625 25 L 6.28125 42.28125 L 7.71875 43.71875 L 25 26.4375 L 42.28125 43.71875 L 43.71875 42.28125 L 26.4375 25 L 43.71875 7.71875 L 42.28125 6.28125 L 25 23.5625 Z"></path>
+            </svg>
+        </button>
+        <div class="varnish-pop-up-inner">
+            <div class="varnish-pop-up-item">
+                <img src="images/pop-up/varnish_glossy.jpg" alt="" class="varnish-pop-up-item-img">
+                <div class="varnish-pop-up-item-content">
+                    <p>
+                        <span>Глянцевый лак</span>
+                        <br>
+                        применяется для придания изображению более блестящего и насыщенного конечного вида полотна.
+                    </p>
+                    <p>
+                        Покрытие лаком позволяет не только придавать более желаемый вид изделию, но и служит защитным
+                        элементом при попадании солнечных УФ лучей, а также позволяет создать условия для более
+                        качественного ухода за картиной при контакте с поверхностью полотна.
+                    </p>
+                    <p>
+                        Вся лакировка тщательным образом выполняется в 2 слоя на последнем этапе подготовки картины.
+                    </p>
+                    <p>
+                        <b>
+                            Основная задача покрытия картины лаком любого типа - это добавление защитного слоя,
+                            предотвращающего повреждение, выгорание и выцветание чернил с течением времени, продление
+                            жизни холсту, защита от минимальных механических повреждений поверхности, удобство при уходе
+                            за картиной, добавление глубины и насыщенности краскам.
+                        </b>
+                    </p>
+                </div>
+            </div>
+            <div class="varnish-pop-up-item">
+                <img src="images/pop-up/varnish_matte.jpg" alt="" class="varnish-pop-up-item-img">
+                <div class="varnish-pop-up-item-content">
+                    <p>
+                        <span>Матовый лак</span>
+                        <br>
+                        также позволяет защитить картину от вредного воздействия лучей и добавить дополнительной
+                        прочности поверхности, при этом внешний вид изображения будет иметь более приглушенные блики на
+                        поверхности при попадании на нее света.
+                    </p>
+                    <p>
+                        Если вы планируете располагать картину возле окна, то предпочтительнее использовать матовый лак,
+                        чтобы сюжет картины не слишком бликовал.
+                    </p>
+                    <p>
+                        Оба типа лакировки позволяют производить влажную уборку загрязненных участков, а также
+                        предотвратить "застывание" следов на поверхности, как например, отпечатки пальцев.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="frame-pop-up">
+        <button class="frame-pop-up-close">
+            <svg class="frame-pop-up-close-svg" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                 width="100"
+                 height="100" viewBox="0 0 50 50">
+                <path d="M 7.71875 6.28125 L 6.28125 7.71875 L 23.5625 25 L 6.28125 42.28125 L 7.71875 43.71875 L 25 26.4375 L 42.28125 43.71875 L 43.71875 42.28125 L 26.4375 25 L 43.71875 7.71875 L 42.28125 6.28125 L 25 23.5625 Z"></path>
+            </svg>
+        </button>
+        <div class="frame-pop-up-inner">
+            <div class="frame-pop-up-item">
+                <img src="images/pop-up/outer_frame.jpg" alt="" class="frame-pop-up-item-img">
+                <div class="frame-pop-up-item-content">
+                    <p>
+                        <span>
+                            Внешняя рамка -
+                        </span>
+                        <br>
+                        это рамка в которую обрамляется готовая картина.
+                    </p>
+                    <p>
+                        Внешняя рамка используется для одиночных картин и зачастую отлично подчеркивает сюжетную линию картины.
+                    </p>
+                    <p>
+                        Рамки выполняются в строгой манере, без каких либо "классических" и "резных" элементов. Исключительно аккуратная и стильная окантовка и не более.
+                    </p>
+                    <p>
+                        Материал - пластик. Возможно и индивидуальное исполнение в дереве.
+                    </p>
+                    <p>
+                        Рамки представлены 3-мя наиболее распространенными цветами: белый, черный, серый/серебро.
+                    </p>
+                    <p>
+                        Тип покраски всех рамок - матовый. Серебро - с текстурой "Металлик". Черный и белый - полностью однотонные.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
 </div>
 

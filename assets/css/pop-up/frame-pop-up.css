@@ -1,0 +1,38 @@
+.frame-pop-up{
+    padding: 20px;
+    display: none;
+    position: relative;
+    z-index: 601;
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px auto;
+    background-color: #FFFFFF;
+    overflow: auto;
+}
+
+
+.frame-pop-up-close{
+    position: absolute;
+    background: none;
+    width: 8px;
+    right: 40px;
+    top: -20px;
+}
+
+.frame-pop-up-close-svg{
+    width: 20px;
+}
+
+.frame-pop-up-item-img{
+    width: 100%;
+    height: auto;
+}
+
+.frame-pop-up-item-content span{
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.frame-pop-up-item-content p{
+    margin-top: 10px;
+}

@@ -1,6 +1,6 @@
 .painting-or-print-pop-up{
     padding: 20px;
-    display: block;
+    display: none;
     position: relative;
     z-index: 601;
     width: 100%;

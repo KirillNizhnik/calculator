@@ -38,22 +38,36 @@
     position: relative;
     width: 100%;
     height: 100%;
+
 }
 
 .calculator-picture-img{
     width: 100%;
     height: auto;
-    transition: transform 0.3s ease;
+    cursor: none;
+
+}
+
+.img-magnifier-glass {
+    position: absolute;
+    pointer-events: none;
+    border: 5px solid #FFFFFF;
+    border-radius: 50%;
+    cursor: none;
+    width: 200px;
+    height: 200px;
+    z-index: 10;
 
 }
 
 .zoom-circle{
     position: absolute;
+    pointer-events: none;
     border-radius: 50%;
     border: 6px solid #FFFFFF;
     cursor: none;
-    width: 100px;
-    height: 100px;
+    width: 250px;
+    height: 250px;
 }
 
 
@@ -110,9 +124,10 @@
 }
 
 .calculator-rights-column-picture-variation-active{
-    cursor: auto;
+    cursor: default;
     background-color: rgba(0, 0, 0, 0.07);
     border: rgba(0, 0, 0, 0.14) 1px solid;
+    pointer-events: none;
 }
 
 .calculator-rights-column-picture-variation-label{
