@@ -14,16 +14,19 @@ document.addEventListener('DOMContentLoaded', function() {
     moduleTypeInputs.forEach(function(input) {
         input.addEventListener('change', function() {
             const dataId = input.dataset.id;
+            console.log(dataId)
             let activeElements = document.querySelectorAll('.calculator-rights-column-picture-variation-active');
             activeElements.forEach(function(element) {
                 element.classList.remove('calculator-rights-column-picture-variation-active');
             });
             if (dataId === 'single-module'){
                 let moduleTypeSingle = document.getElementById('module-type-single');
+                moduleTypeSingle.checked = true
                 let parentDiv = moduleTypeSingle.closest('.calculator-rights-column-picture-variation');
                 parentDiv.classList.add('calculator-rights-column-picture-variation-active')
-            }else{
+            } else if(dataId === 'double-module'){
                 let moduleTypeSingle = document.getElementById('module-type-module');
+                moduleTypeSingle.checked = true
                 let parentDiv = moduleTypeSingle.closest('.calculator-rights-column-picture-variation');
                 parentDiv.classList.add('calculator-rights-column-picture-variation-active')
             }

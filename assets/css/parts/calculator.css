@@ -235,6 +235,23 @@
     width: 30px;
 }
 
+.calculator-dimensions-popular-list{
+    margin-top: 10px;
+    display: grid;
+    gap: 10px;
+    justify-content: center;
+    grid-template-columns: repeat(3, max-content);
+}
+
+.calculator-dimensions-popular-item{
+    padding: 5px;
+    font-size: 12.6px;
+    border: 1px solid #d3e9ff;
+    background-color: white;
+    cursor: pointer;
+    text-align: center;
+}
+
 #width::-webkit-inner-spin-button,
 #width::-webkit-outer-spin-button,
 #height::-webkit-inner-spin-button,
