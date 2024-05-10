@@ -66,8 +66,9 @@ function rangeTrack(){
     let widthInput = document.getElementById('width');
     let cowbellRange = document.getElementById('cowbell');
     widthInput.value = cowbellRange.value
-    cowbellRange.addEventListener('input', function(event){
-        widthInput.value = cowbellRange.value
+    cowbellRange.addEventListener('input', function(event) {
+    widthInput.value = cowbellRange.value;
+
     });
 }
 
