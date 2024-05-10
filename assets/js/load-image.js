@@ -47,12 +47,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 parentDiv.classList.add('calculator-rights-column-picture-variation-active')
                 let id = radioButton.id;
                 let radioInput
-                if (id==='module-type-single'){
+                if (id === 'module-type-single'){
                      radioInput = document.querySelector('input[type="radio"][data-id="single-module"]');
                 }else {
                      radioInput = document.querySelector('input[type="radio"][data-id="double-module"]');
                 }
                 radioInput.checked = true;
+                parseSizes(radioInput)
                 const parentVariation = radioInput.closest('.calculator-variation-mode');
                 const allVariations = document.querySelectorAll('.calculator-variation-mode');
                 allVariations.forEach(function(variation) {
