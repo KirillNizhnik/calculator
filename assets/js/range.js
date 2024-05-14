@@ -36,6 +36,7 @@ function rangeListener(){
     my_range.on("change", function (event) {
         widthInput.value = getRangeValue();
         setHeight()
+        generateSegments()
     });
 }
 
