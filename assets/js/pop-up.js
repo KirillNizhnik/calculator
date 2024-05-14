@@ -10,13 +10,13 @@ const modalCloseFrame = document.querySelector('.frame-pop-up');
 const closeButton = document.querySelector('.tension-type-pop-up-close');
 const closeDimensionsPopUp = document.querySelector('.dimensions-pop-up-close');
 const closePaintingOrPrintPopUp = document.querySelector('.painting-or-print-pop-up-close');
-const closeVarnishPopUp = document.querySelector('.varnish-pop-up-close');
+// const closeVarnishPopUp = document.querySelector('.varnish-pop-up-close');
 const closeFramePopUp = document.querySelector('.frame-pop-up-close');
 
 const tensionOpen = document.getElementById('tension-type-pop-up');
 const dimensionsPopUpOpen = document.getElementById('dimensions-pop-up');
 const paintingOrPrintPopUpOpen = document.getElementById('painting-or-print-pop-up');
-const varnishPopUpOpen = document.getElementById('varnish-pop-up');
+// const varnishPopUpOpen = document.getElementById('varnish-pop-up');
 const framePopUpOpen = document.getElementById('frame-pop-up');
 
 function openModal(modalElement) {
@@ -36,11 +36,11 @@ function closeModal(modalElement) {
 closeButton.addEventListener('click', () => closeModal(modal));
 closeDimensionsPopUp.addEventListener('click', () => closeModal(modalDimensions));
 closePaintingOrPrintPopUp.addEventListener('click', () => closeModal(modalClosePaintingOrPrint));
-closeVarnishPopUp.addEventListener('click', () => closeModal(modalCloseVarnish));
+// closeVarnishPopUp.addEventListener('click', () => closeModal(modalCloseVarnish));
 closeFramePopUp.addEventListener('click', () => closeModal(modalCloseFrame));
 
 tensionOpen.addEventListener('click', () => openModal(modal));
 dimensionsPopUpOpen.addEventListener('click', () => openModal(modalDimensions));
 paintingOrPrintPopUpOpen.addEventListener('click', () => openModal(modalClosePaintingOrPrint));
-varnishPopUpOpen.addEventListener('click', () => openModal(modalCloseVarnish));
-framePopUpOpen.addEventListener('click', () => openModal(modalCloseFrame));
+// varnishPopUpOpen.addEventListener('click', () => openModal(modalCloseVarnish));
+// framePopUpOpen.addEventListener('click', () => openModal(modalCloseFrame));

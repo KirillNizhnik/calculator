@@ -1,13 +1,81 @@
 document.addEventListener('DOMContentLoaded', function() {
     let singleModuleElement = document.querySelector('[data-id="single-module"]');
-    parseSizes(singleModuleElement)
+    parseSizes(singleModuleElement);
     let moduleTypeRadios = document.querySelectorAll('input[name="module_type"]');
 
     moduleTypeRadios.forEach(function(radioButton) {
-        radioButton.addEventListener('change', function() {
+        radioButton.addEventListener('input', function() {
             parseSizes(radioButton)
         });
     });
+
+
+    let widthInput = document.getElementById('width');
+    let timer;
+
+    widthInput.addEventListener('input', function() {
+        clearTimeout(timer);
+
+        const delay = 1000;
+
+
+        timer = setTimeout(function() {
+            let width = parseFloat(widthInput.value);
+            let cowbellInput = document.getElementById('cowbell');
+            let minCowbellValue = getMinValue()
+            let maxCowbellValue = getMaxValue()
+            let isValueInRange = width >= minCowbellValue && width <= maxCowbellValue;
+            if (isValueInRange){
+                setHeight();
+                setStartMyRange(width);
+            } else if (width < minCowbellValue){
+                widthInput.value = minCowbellValue;
+                setHeight();
+                setStartMyRange(minCowbellValue)
+            } else if (width > maxCowbellValue){
+                widthInput.value = maxCowbellValue;
+                setHeight();
+                setStartMyRange(maxCowbellValue)
+
+                }
+        }, delay);
+    });
+
+
+
+    let heightInput = document.getElementById('height');
+    let timerHeight;
+    heightInput.addEventListener('input', function() {
+        clearTimeout(timerHeight);
+        const delay = 1000;
+        timerHeight = setTimeout(function() {
+            setWidth();
+            let resultWidth = widthInput.value;
+            let cowbellInput = document.getElementById('cowbell');
+            let minCowbellValue = getMinValue()
+            let maxCowbellValue = getMaxValue()
+            console.log(maxCowbellValue, maxCowbellValue)
+            let isValueInRange = resultWidth >= minCowbellValue && resultWidth <= maxCowbellValue;
+            if (isValueInRange){
+                setHeight();
+                setStartMyRange(resultWidth)
+            } else if (resultWidth < minCowbellValue){
+                widthInput.value = minCowbellValue;
+                setHeight();
+                setStartMyRange(minCowbellValue)
+            } else if (resultWidth > maxCowbellValue){
+                widthInput.value = maxCowbellValue;
+                setHeight();
+                setStartMyRange(maxCowbellValue)
+            }
+            cowbellInput.value = widthInput.value
+        }, delay);
+    });
+
+
+
+
+
 
 
 });
@@ -17,6 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
 function parseSizes(module) {
     updatePopularSizes(module);
     setRange(module);
+    setHeight()
 
 }
 
@@ -27,10 +96,9 @@ function setRange(module){
     let minWidth = module.getAttribute('data-min-width');
     let cowbellRange = document.getElementById('cowbell');
     if (maxWidth && minWidth){
-    cowbellRange.style.display = "block"
-    cowbellRange.min = minWidth;
-    cowbellRange.max = maxWidth;
-    cowbellRange.value = minWidth
+    cowbellRange.style.display = "block";
+    updateRange(minWidth, maxWidth)
+    setStartMyRange(minWidth)
     }else {
         cowbellRange.style.display = "none";
     }
@@ -62,15 +130,15 @@ function updatePopularSizes(module){
 }
 
 
-function rangeTrack(){
+function rangeTrack() {
     let widthInput = document.getElementById('width');
     let cowbellRange = document.getElementById('cowbell');
-    widthInput.value = cowbellRange.value
-    cowbellRange.addEventListener('input', function(event) {
-    widthInput.value = cowbellRange.value;
 
-    });
+    widthInput.value = getRangeValue();
+    rangeListener()
 }
+
+
 
 
 
@@ -86,11 +154,67 @@ function attachPopularItemsClickListener() {
             widthInput.value = width;
             heightInput.value = height;
             let cowbellRange = document.getElementById('cowbell');
-            cowbellRange.value = width;
-
+            setStartMyRange(width)
+            generateSegments()
         });
     });
 }
+
+
+
+
+function setHeight(){
+    let heightInput = document.getElementById('height');
+    let widthInput = document.getElementById('width');
+    console.log(widthInput.value)
+    heightInput.value = calculateHeight(widthInput.value);
+}
+
+function calculateHeight(width) {
+    const metaInfoElement = document.querySelector('.calculator-meta-info');
+    const growthRatio = parseFloat(metaInfoElement.getAttribute('data-growth-ratio'));
+    let floatResult =  Math.round(width * growthRatio * 10) / 10;
+    if (floatResult % 1 !== 0){
+        return Math.floor(floatResult);
+    } else{
+        return floatResult;
+    }
+}
+
+
+function setWidth(){
+    let heightInput = document.getElementById('height');
+    let widthInput = document.getElementById('width');
+    widthInput.value = calculateWidth(heightInput.value);
+
+
+
+
+
+
+}
+
+function calculateWidth(height) {
+    const metaInfoElement = document.querySelector('.calculator-meta-info');
+    const growthRatio = parseFloat(metaInfoElement.getAttribute('data-growth-ratio'));
+    let floatResult = Math.ceil(height / (growthRatio * 100) * 100);
+    console.log(floatResult)
+    if (floatResult % 1 !== 0){
+        return Math.ceil(floatResult);
+    }else{
+        return floatResult;
+    }
+}
+
+
+
+
+
+
+
+
+
+
 
 
 

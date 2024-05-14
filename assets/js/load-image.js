@@ -108,10 +108,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function magnify(img, zoom) {
     let glass, w, h, bw;
-    let isGlassVisible = false; // Переменная для отслеживания видимости масштабного стекла
-    let hideTimer; // Таймер для задержки перед скрытием масштабного стекла
-
-    /* Create magnifier glass: */
+    let isGlassVisible = false;
     glass = document.createElement("DIV");
     glass.setAttribute("class", "img-magnifier-glass");
 
@@ -124,11 +121,9 @@ function magnify(img, zoom) {
     w = glass.offsetWidth / 2;
     h = glass.offsetHeight / 2;
 
-    /* Execute a function when someone moves the magnifier glass over the image: */
     glass.addEventListener("mousemove", moveMagnifier);
     img.addEventListener("mousemove", moveMagnifier);
 
-    /* Execute a function when mouse enters the image area */
     img.addEventListener("mouseenter", () => {
         if (!isGlassVisible) {
             glass.style.display = "block";
