@@ -603,6 +603,10 @@
     fill: orange;
 }
 
+.calculator-dimensions-wrapper{
+    align-items: center;
+}
+
 
 @media (max-width: 1200px) {
     .calculator-image-columns{

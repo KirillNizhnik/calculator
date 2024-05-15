@@ -6,7 +6,8 @@ my_range.ionRangeSlider({
     force_edges: true,
     hide_min_max: true,
     hide_from_to: true,
-    block: false
+    block: false,
+    step: 11,
 });
 
 let rangeData = my_range.data("ionRangeSlider");
